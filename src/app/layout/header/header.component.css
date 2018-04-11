@@ -1,0 +1,11 @@
+nav {
+    color: white;
+}
+
+nav .bg-light {
+    background-color: transparent !important;
+}
+
+nav .locales-flags a {
+    text-decoration: none;
+}

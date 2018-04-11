@@ -1,1 +1,80 @@
 /* You can add global styles to this file, and also import other style files */
+
+/*!
+ * Start Bootstrap - SB Admin v4.0.0-beta.2 (https://startbootstrap.com/template-overviews/sb-admin)
+ * Copyright 2013-2017 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-sb-admin/blob/master/LICENSE)
+ */
+
+html {
+    position: relative;
+    min-height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+body.sticky-footer {
+    margin-bottom: 56px;
+}
+
+body.sticky-footer .content-wrapper {
+    min-height: calc(100vh - 56px - 56px);
+}
+
+body.fixed-nav {
+    padding-top: 56px;
+}
+
+p {
+    margin-bottom: 0px;
+}
+
+a.orange {
+    color: #f05f40 !important;
+    transition: all 0.35s;
+}
+
+a.orange:hover, a.orange:focus {
+    color: #eb3812 !important;
+    text-decoration: underline !important;;
+    cursor: pointer;
+}
+
+hr {
+    border-color: #f05f40;
+    border-width: 3px;
+    /* max-width: 50px; */
+  }
+  
+.content-wrapper {
+    min-height: calc(100vh - 56px);
+    background-color: #f2f2f2;
+    /* padding-top: 1rem; */
+}
+
+.content-wrapper {
+    overflow-x: hidden;
+    background-color: #f2f2f2;
+}
+
+.rotate {
+    -ms-transform: rotate(90deg);
+    /* IE 9 */
+    -webkit-transform: rotate(90deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(90deg);
+}
+
+/* Background colors */
+.bg-dark {
+    background-color: #222222;
+    color: white;
+}
+
+.bg-light-dark {
+    background: #2f2f2f;
+    color: white;
+  }
