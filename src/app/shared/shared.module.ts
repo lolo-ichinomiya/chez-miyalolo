@@ -1,15 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ModalGalleryModule } from 'angular-modal-gallery';
 
 import { LoadingModule, ANIMATION_TYPES } from 'ngx-loading';
+import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    ModalGalleryModule.forRoot(),
+    ScrollToModule.forRoot()
   ],
   declarations: [],
   exports: [
-    LoadingModule
+    LoadingModule,
+    ModalGalleryModule,
+    ScrollToModule
   ]
 })
 export class SharedModule {

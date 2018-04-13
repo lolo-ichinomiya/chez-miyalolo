@@ -4,6 +4,10 @@
 /* PETS*/
 
 @import url("https://fonts.googleapis.com/css?family=Cardo|Pathway+Gothic+One");
+
+@import url("https://fonts.googleapis.com/css?family=Kaushan+Script");
+/* header section */
+
 header {
     position: relative;
     width: 100%;
@@ -13,10 +17,8 @@ header {
     background-size: cover;
     -o-background-size: cover;
     background-position: center;
-    /*background-image: url('../images/body-bg-paris.jpg');*/
-    background-color: #000;
     text-align: center;
-    /*color: white;*/
+    color: white;
 }
 
 header .header-content {
@@ -24,6 +26,7 @@ header .header-content {
     text-align: center;
     padding: 100px 15px 100px;
     width: 100%;
+    min-height: auto;
 }
 
 header .header-content .header-content-inner h1 {
@@ -40,54 +43,54 @@ header .header-content .header-content-inner hr {
 header .header-content .header-content-inner p {
     font-weight: 300;
     color: rgba(255, 255, 255, 0.7);
-    font-size: 16px;
+    font-size: 20px;
+    font-family: 'Kaushan Script', sans-serif;
     margin-bottom: 50px;
+    text-align: left;
 }
 
-section {
-    padding-top: 20px;
-}
+/* Timeline sections */
 
-.list-inline-item a {
-    color: white;
+#timeline-us .container, #pets .container {
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
-
-@media (min-width: 768px) {
-    header {
-        /* min-height: 100%; */
-    }
-    header .header-content {
-        /*
-        position: absolute;
-        top: 50%;
-        -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-        transform: translateY(-50%);
-        padding: 0 50px;
-        */
-    }
-    header .header-content .header-content-inner {
-        max-width: 1000px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    header .header-content .header-content-inner p {
-        font-size: 18px;
-        max-width: 80%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
-/* Time Line */
 
 .timeline {
     display: flex;
     margin: 0 auto;
+    margin-top: 100px;
     flex-wrap: wrap;
     flex-direction: column;
     max-width: 700px;
     position: relative;
+}
+
+.timeline-header {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.timeline-header__title {
+    color: #fff;
+    font-size: 46px;
+    font-family: Cardo;
+    font-weight: normal;
+    margin: 0;
+    border-bottom: 3px solid #f05f40;
+}
+
+.timeline-header__subtitle {
+    color: rgba(255, 255, 255, 0.5);
+    font-family: "Pathway Gothic One", sans-serif;
+    font-size: 16px;
+    letter-spacing: 5px;
+    margin: 10px 0 0 0;
+    font-weight: normal;
 }
 
 .timeline__content-title {
@@ -119,12 +122,6 @@ section {
     margin-left: -1px;
     content: "";
     background: rgba(255, 255, 255, 0.07);
-}
-
-@media only screen and (max-width: 767px) {
-    .timeline:before {
-        left: 40px;
-    }
 }
 
 .timeline-item {
@@ -187,6 +184,50 @@ section {
     margin: -50px 0 20px 0;
 }
 
+.timeline__img {
+    max-width: 100%;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
+}
+
+#pets {
+    background: rgba(99, 99, 99, 0.8);
+}
+
+/* About section */
+
+#about .list-inline-item a {
+    color: white;
+}
+
+/* Responsive */
+
+@media (min-width: 768px) {
+    header {
+        min-height: 100%;
+    }
+ }
+
+@media (max-width: 768px) {
+
+    #about p {
+        display: inline-block;
+    }
+
+    #about div.about-column {
+        margin-bottom: 20px;
+    }
+
+    #about div.about-column p:first-child{
+        width: 130px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .timeline:before {
+        left: 40px;
+    }
+}
+
 .home-contact p svg {
     margin-right: 20px;
 }
@@ -214,53 +255,6 @@ section {
     }
 }
 
-.timeline__img {
-    max-width: 100%;
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
-}
-
-.timeline-container {
-    width: 100%;
-    position: relative;
-    padding: 80px 0;
-    background-attachment: fixed;
-    background-size: cover;
-}
-
-.timeline-container:before {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(99, 99, 99, 0.8);
-    content: "";
-}
-
-.timeline-header {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 80px;
-    position: relative;
-}
-
-.timeline-header__title {
-    color: #fff;
-    font-size: 46px;
-    font-family: Cardo;
-    font-weight: normal;
-    margin: 0;
-}
-
-.timeline-header__subtitle {
-    color: rgba(255, 255, 255, 0.5);
-    font-family: "Pathway Gothic One", sans-serif;
-    font-size: 16px;
-    letter-spacing: 5px;
-    margin: 10px 0 0 0;
-    font-weight: normal;
-}
-
 /*  Us Timeline */
 
 #timeline-us {
@@ -268,12 +262,13 @@ section {
     margin: 0;
     font-family: "Lato", sans-serif;
     position: relative;
+    background: #27a6bc linear-gradient(130deg, #017f96 0, #57d8eb 100%) no-repeat fixed;
 }
 
 .timeline-life {
-    width: 80%;
+    /*width: 80%;*/
     margin-left: 10%;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     border-left: 3px solid #c0392b;
 }
 
@@ -293,11 +288,15 @@ section {
     margin: 40px 40px 40px 120px;
 }
 
+.timeline-life .column .title {
+    cursor: pointer;
+}
+
 .timeline-life .column .title h1 {
     font-size: 120px;
     color: rgba(0, 0, 0, 0.1);
     font-family: serif;
-    letter-spacing: 3px;
+    letter-spacing: 5px;
     display: block;
     font-weight: bold;
 }
@@ -390,4 +389,10 @@ section {
         margin-left: -65px;
         border: 1px solid #c0392b;
     }
+}
+
+#about .container {
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-top: 20px;
 }

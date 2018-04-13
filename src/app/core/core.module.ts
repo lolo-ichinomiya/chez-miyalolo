@@ -2,6 +2,10 @@
 import { ModuleWithProviders, NgModule, Optional, SkipSelf } from '@angular/core';
 
 import { CommonModule } from '@angular/common';
+import { ApplicationService } from '../services/application.service';
+import { MiyaloloApiService } from 'app/services/miyalolo-api.service';
+import { AuthentificationService } from '../services/authentification.service';
+import { ImageService } from '../services/image.service';
 
 @NgModule({
     imports: [
@@ -10,7 +14,10 @@ import { CommonModule } from '@angular/common';
     declarations: [  ],
     exports: [  ],
     providers: [
-        
+        ApplicationService,
+        MiyaloloApiService,
+        AuthentificationService,
+        ImageService
     ]
 })
 export class CoreModule {

@@ -11,27 +11,45 @@
     </a>
   </div>
 
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+  <button #navbarToggler class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
     aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav ml-auto">
+
+      <!--
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuTimeline" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false">
           Moments de vie
         </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuTimeline">
+          <a class="dropdown-item" routerLink="timeline/carine">Carine</a>
           <a class="dropdown-item" href="#">Mariage</a>
-          <a class="dropdown-item" href="#">Carine</a>
         </div>
       </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuPets" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Animaux
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuPets">
+          <a class="dropdown-item" href="#">Freddy</a>
+          <a class="dropdown-item" href="#">Ulala</a>
+          <a class="dropdown-item" href="#">Ramsès</a>
+        </div>
+      </li>
+      -->
       <li class="nav-item">
-        <a class="nav-link" href="#">Animaux</a>
+        <a class="nav-link" href="#" (click)="collapseNav()">Chronologie</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">A propos</a>
+        <a class="nav-link" href="#" (click)="collapseNav()" [ngx-scroll-to]="'pets'">Animaux</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" (click)="collapseNav()">À propos</a>
       </li>
     </ul>
   </div>

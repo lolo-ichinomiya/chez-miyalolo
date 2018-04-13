@@ -1,8 +1,8 @@
 <!-- Image -->
-<header>
+<header [ngStyle]="{'background-image': 'url(./assets/images/home/header.jpg)' }">
   <div class="header-content">
     <div class="header-content-inner">
-      <span>Bienvenue chez MiyaLolo</span>
+      <p>Bienvenue chez MiyaLolo</p>
     </div>
   </div>
 </header>
@@ -10,81 +10,72 @@
 
 <section id="timeline-us">
   <div class="container">
-    <div class="row">
 
-      <!--
-  <div class="timeline-header">
-    <h2 class="timeline-header__title">Notre aventure</h2>
-    <h3 class="timeline-header__subtitle">Moments fleuris</h3>
-  </div>
-  -->
-
-      <div class="timeline-life-main">
-        <h1>Notre aventure</h1>
-        <p>Moments Fleuris</p>
-      </div>
-
-      <div class="timeline-life">
-        <div class="column">
-          <!--
+    <div class="timeline-header">
+      <h2 class="timeline-header__title">Chronologie</h2>
+      <h3 class="timeline-header__subtitle">Moments fleuris</h3>
+    </div>
+    <div class="timeline-life">
+      <div class="column">
+        <!--
           <img src="assets/images/home/2018_carine.jpg" class="img-fluid img-thumbnail rounded-circle float-right rotate" />
           -->
 
-          <div class="title">
-            <h1>2018</h1>
-            <h2>Naissance de Carine</h2>
-          </div>
-
-          <div class="description">
-            <p>Naissance de notre petite choupinette. 2728g, 47.7 cm et déjà tous ses cheveux.</p>
-          </div>
-
+          <div class="title" routerLink="timeline/carine">
+          <h1>2018</h1>
+          <h2>Naissance de Carine</h2>
         </div>
 
-        <div class="column">
-          <div class="title">
-            <h1>2016</h1>
-            <h2>Déménagement à Tokyo</h2>
-          </div>
-          <div class="description">
-            <p>Déménagement à Tokyo, dans l'arrondissement de Kita.</p>
-          </div>
+        <div class="description">
+          <p>Naissance de notre petite choupinette le 4 avril 2018 à Tokyo - 19h07 (heure japonaise) - 2728g, 47.7 cm et déjà tous ses cheveux !</p>
         </div>
 
-        <div class="column">
-          <div class="title">
-            <h1>2015</h1>
-            <h2>Cérémonie de mariage</h2>
-          </div>
-          <div class="description">
-            <p> Cérémonie de mariage en France en présence de la famille et des amis. </p>
-          </div>
-        </div>
+      </div>
 
-        <div class="column">
-          <div class="title">
-            <h1>2014</h1>
-            <h2>Entre la France et le Japon</h2>
-          </div>
-          <div class="description">
-            <p>Travail en France, escapades au Japon</p>
-          </div>
+      <div class="column">
+        <div class="title">
+          <h1>2016</h1>
+          <h2>Déménagement à Tokyo</h2>
         </div>
-
-        <div class="column">
-          <div class="title">
-            <h1> 2011</h1>
-            <h2>Visa Vacances-Travail</h2>
-          </div>
-          <div class="description">
-            <p> Séjour d'un an à Ichinomiya. </p>
-          </div>
+        <div class="description">
+          <p>Déménagement à Tokyo, dans l'arrondissement de Kita.</p>
         </div>
+      </div>
 
+      <div class="column">
+        <div class="title">
+          <h1>2015</h1>
+          <h2>Cérémonie de mariage</h2>
+        </div>
+        <div class="description">
+          <p> Cérémonie de mariage en France en présence de la famille et des amis. </p>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="title">
+          <h1>2014</h1>
+          <h2>Entre la France et le Japon</h2>
+        </div>
+        <div class="description">
+          <p>Travail en France, escapades au Japon</p>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="title">
+          <h1> 2011</h1>
+          <h2>Visa Vacances-Travail</h2>
+        </div>
+        <div class="description">
+          <p> Séjour d'un an à Ichinomiya. </p>
+        </div>
+      </div>
+
+      <!--
         <div class="column">
           <div class="title">
             <h1>
-              < 2011 <!-- - 2009 -->
             </h1>
             <h2> France </h2>
           </div>
@@ -92,29 +83,31 @@
             <p> Vie en France </p>
           </div>
         </div>
-      </div>
+      -->
     </div>
   </div>
 </section>
 
 <section id="pets">
 
-  <div class="timeline-container" id="timeline-miyalolo">
+  <div class="container">
+
     <div class="timeline-header">
-      <h2 class="timeline-header__title">Nos petits animaux</h2>
+      <h2 class="timeline-header__title">Animaux</h2>
       <h3 class="timeline-header__subtitle">Petits monstres</h3>
     </div>
+
     <div class="timeline">
       <div class="timeline-item" data-text="Ulala">
         <div class="timeline__content">
           <img class="timeline__img" src="assets/images/home/home_ulala.jpg" />
           <h2 class="timeline__content-title">Ulala</h2>
-          <p class="timeline__content-desc">2016 - Je viens de Kita-ku</p>
+          <p class="timeline__content-desc">2016 - Le petit Kita-ku</p>
         </div>
       </div>
       <div class="timeline-item" data-text="Freddy">
         <div class="timeline__content">
-            <img class="timeline__img rotate" src="assets/images/home/home_freddy.jpg" />
+          <img class="timeline__img rotate" src="assets/images/home/home_freddy.jpg" />
           <h2 class="timeline__content-title">Freddy</h2>
           <p class="timeline__content-desc">2016 - Un français au Japon</p>
         </div>
@@ -128,7 +121,7 @@
       </div>
       <div class="timeline-item" data-text="Hamsters">
         <div class="timeline__content">
-          <img class="timeline__img" src="images/timeline/wedding.JPG" />
+          <img class="timeline__img" src="assets/images/home/home_hamster.jpg" />
           <h2 class="timeline__content-title">Kiri & Otometi</h2>
           <p class="timeline__content-desc">2011/2014 - Petits choses</p>
         </div>
@@ -140,68 +133,68 @@
 
 <section id="about" class="bg-light-dark">
   <div class="container">
+    <div class="timeline-header">
+      <h2 class="timeline-header__title">À propos</h2>
+      <h3 class="timeline-header__subtitle">contact</h3>
+    </div>
+
     <div class="row">
-      <div class="col-12">
-        <h2>
-          <span>À propos</span>
-        </h2>
-        <hr class="primary">
-      </div>
-    </div>
-
-    <div class="row home-contact text-center">
-      <div class="col-4">
+      <div class="col-sm about-column align-items-end">
         <p>
-          <i class="far fa-envelope fa-2x sr-contact"></i>Courriel
-          <br/>
-          <span>
-            <a class="orange" href="mailto:loic.belleteste@gmail.com">loic.belleteste@gmail.com</a>
-          </span>
+          <i class="far fa-envelope fa-2x sr-contact"></i>
+          <span>&nbsp;Courriel</span>
+        </p>
+        <p>
+          <a class="orange" href="mailto:loic.belleteste@gmail.com">loic.belleteste@gmail.com</a>
         </p>
       </div>
-      <div class="col-4">
+      <div class="col-sm about-column">
         <p>
-          <i class="fas fa-home fa-2x sr-contact"></i>Adresse
-          <br/>
-          <span>Tokyo Nerima</span>
-          <br/>
+          <i class="fas fa-home fa-2x sr-contact"></i>
+          <span>&nbsp;Adresse</span>
+        </p>
+        <p>
+          <span>Tokyo Nerima Toyotama-kita</span>
         </p>
       </div>
-      <div class="col-4">
+      <div class="col-sm about-column">
         <p>
-          <i class="fas fa-phone fa-2x sr-contact"></i>Téléphone
-          <br/>
-          <span>+81 90-5000-5548</span>
-        </p>
-      </div>
-    </div>
-
-    <div class="row home-social">
-      <div class="col-12 text-center">
-        <ul class="list-inline">
-          <li class="list-inline-item">
-            <a target="_blank" href="https://www.facebook.com/lolochin">
-              <i class="fab fa-facebook-square fa-fw fa-3x"></i>
-            </a>
-          </li>
-          <li class="list-inline-item">
-            <a target="_blank" href="https://www.instagram.com/deep.turtle">
-              <i class="fab fa-instagram fa-fw fa-3x"></i>
-            </a>
-          </li>
-          <li class="list-inline-item">
-            <a target="_blank" href="https://jp.linkedin.com/in/loïc-belleteste-04b88b93/en">
-              <i class="fab fa-linkedin fa-fw fa-3x"></i>
-            </a>
-          </li>
-          <li class="list-inline-item">
-            <a href="files/Loic_Belleteste_CV_FR.pdf">
-              <i class="fas fa-download fa-fw fa-3x"></i>
-            </a>
-          </li>
-        </ul>
+          <i class="fas fa-phone fa-2x sr-contact"></i>
+          <span>&nbsp;Téléphone</span>
+          <p>
+            <span>+81 90-5000-5548</span>
+          </p>
       </div>
     </div>
 
   </div>
+
+
+  <div class="row home-social">
+    <div class="col-12 text-center">
+      <ul class="list-inline">
+        <li class="list-inline-item">
+          <a target="_blank" href="https://www.facebook.com/lolochin">
+            <i class="fab fa-facebook-square fa-fw fa-3x"></i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a target="_blank" href="https://www.instagram.com/deep.turtle">
+            <i class="fab fa-instagram fa-fw fa-3x"></i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a target="_blank" href="https://jp.linkedin.com/in/loïc-belleteste-04b88b93/en">
+            <i class="fab fa-linkedin fa-fw fa-3x"></i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a href="files/Loic_Belleteste_CV_FR.pdf">
+            <i class="fas fa-download fa-fw fa-3x"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
 </section>

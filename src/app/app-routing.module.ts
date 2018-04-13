@@ -1,19 +1,28 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+
 import { HomeComponent } from './layout/home/home.component';
+import { CarineComponent } from './modules/timeline/carine/carine.component';
+import { TimelineModule } from './modules/timeline/timeline.module';
 
 
 const routes: Routes = [
-  // Common routes
-  { path: '', component: HomeComponent },
-  
+    // Common routes
+    { path: '', component: HomeComponent },
+
+    // Timeline routes
+    { path: 'timeline/carine', component: CarineComponent },
+
 ];
 
 @NgModule({
-  imports: [ 
-    
-    RouterModule.forRoot(routes) ],
-  exports: [ RouterModule ]
+    imports: [
+
+        TimelineModule,
+
+        RouterModule.forRoot(routes)
+    ],
+    exports: [RouterModule]
 })
 
 export class AppRoutingModule { }
