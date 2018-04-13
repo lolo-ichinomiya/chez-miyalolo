@@ -9,6 +9,9 @@ import {
   DotsConfig, GridLayout, Image, ImageModalEvent, LineLayout, PlainGalleryConfig, PlainGalleryStrategy, PreviewConfig
 } from 'angular-modal-gallery';
 
+
+import { NgxGalleryOptions, NgxGalleryImage, NgxGalleryAnimation } from 'ngx-gallery';
+
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/forkJoin';
 import { ImageService } from 'app/services/image.service';
@@ -34,10 +37,45 @@ export class CarineComponent implements OnInit {
     layout: new AdvancedLayout(-1, true)
   };
 
+  galleryOptions: NgxGalleryOptions[];
+  galleryImages: NgxGalleryImage[] = [];
+
   constructor(private imagesService: ImageService) {
   }
 
   ngOnInit() {
+
+    this.galleryOptions = [
+      {
+        width: '600px',
+        height: '400px',
+        thumbnailsColumns: 4,
+        /*"previewFullscreen": true,*/
+        "previewZoom": true,
+        "previewRotate": true,
+        "imageArrowsAutoHide": true, 
+        "thumbnailsArrowsAutoHide": true,
+        "rotateRightIcon": "fas fa-redo",
+        imageAnimation: NgxGalleryAnimation.Zoom
+      },
+      // max-width 800
+      {
+        breakpoint: 800,
+        width: '100%',
+        height: '600px',
+        imagePercent: 80,
+        thumbnailsPercent: 20,
+        thumbnailsMargin: 20,
+        thumbnailMargin: 20
+      },
+      // max-width 400
+      {
+        breakpoint: 400,
+        "imageArrowsAutoHide": true, 
+        "thumbnailsArrowsAutoHide": true,
+        preview: true
+      }
+    ];
 
     // Loads images
     this.getData().subscribe(data => {
@@ -45,14 +83,20 @@ export class CarineComponent implements OnInit {
       const [imagesData] = data;
 
       imagesData.map((image, index) => {
-        this.images.push(new Image(
+        /*this.images.push(new Image(
           index,
           { // modal
             img: '/assets/images/timeline/carine/' + image.img,
             description: image.description,
             title: image.title
           }
-        ));
+        ));*/
+        this.galleryImages.push({
+          small: '/assets/images/timeline/carine/' + image.img,
+          medium: '/assets/images/timeline/carine/' + image.img,
+          big: '/assets/images/timeline/carine/' + image.img,
+          description: image.description
+        });
       });
 
       this.isPageLoaded = true;

@@ -7,11 +7,18 @@
 
     <!-- Photos -->
     <h1>Naissance et premiers temps</h1>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-sm text-center">
+          <ngx-gallery [options]="galleryOptions" [images]="galleryImages"></ngx-gallery>
+        </div>
+      </div>
+    </div>
 
+    <!--
     <div class="my-app-custom-plain-container-row">
       <ng-container *ngFor="let img of images; let i = index">
         <div *ngIf="i <= nbImagesToDisplay">
-          <!-- 2 is a fixed value that I'm using to display only two images -->
           <a class="more" *ngIf="i === nbImagesToDisplay" (click)="openImageModalRow(img)"> +{{images.length - nbImagesToDisplay - 1}} more </a>
           <img *ngIf="img.plain && img.plain.img; else noThumb" class="my-app-custom-image-row" [src]="img.plain.img" (click)="openImageModalRow(img)"
             [alt]="img.modal.description" />
@@ -26,57 +33,10 @@
 
     <ks-modal-gallery [modalImages]="images" [plainGalleryConfig]="customPlainGalleryRowConfig">
     </ks-modal-gallery>
+    -->
 
 
-    <!-- Videos -->
-    <h1>Vidéos</h1>
-    <!--
-    <h2>Première vidéo</h2>
-    <video width="320" height="240" controls>
-      <source src="assets/videos/carine/IMG_1898.mp4" type="video/mp4">
-    </video>
-  -->
-    <div class="card-group">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">À l'hôpital</h5>
-          <p class="card-text">
-            <video controls>
-              <source src="assets/videos/carine/IMG_1898.mp4" type="video/mp4">
-            </video>
-          </p>
-          <p class="card-text">
-            <small class="text-muted">05/04/2018</small>
-          </p>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">À la maison</h5>
-          <p class="card-text">
-            <video controls>
-              <source src="assets/videos/carine/IMG_1925.MOV" type="video/mp4">
-            </video>
-          </p>
-          <p class="card-text">
-            <small class="text-muted">09/04/2018</small>
-          </p>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">À la maison 2</h5>
-          <p class="card-text">
-            <video controls>
-              <source src="assets/videos/carine/IMG_1913.MOV" type="video/mp4">
-            </video>
-          </p>
-          <p class="card-text">
-            <small class="text-muted">09/04/2018</small>
-          </p>
-        </div>
-      </div>
-    </div>
+
 
   </ng-container>
 </div>

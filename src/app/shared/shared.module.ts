@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ModalGalleryModule } from 'angular-modal-gallery';
+import { NgxGalleryModule } from 'ngx-gallery';
 
 import { LoadingModule, ANIMATION_TYPES } from 'ngx-loading';
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
@@ -15,6 +16,7 @@ import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
   exports: [
     LoadingModule,
     ModalGalleryModule,
+    NgxGalleryModule,
     ScrollToModule
   ]
 })
