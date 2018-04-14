@@ -8,6 +8,7 @@ import { HttpClient } from '@angular/common/http';
 export class MiyaloloApiService {
 
   public static LOCAL_CARINE_IMAGES = './assets/data/timeline/carine.json';
+  public static LOCAL_MARRIAGE_IMAGES = './assets/data/timeline/marriage.json';
 
   constructor(private http: Http) { }
 

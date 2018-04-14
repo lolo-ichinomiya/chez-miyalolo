@@ -12,4 +12,10 @@ export class ImageService {
     })
   }
 
+  public getMarriageImages(): Promise<any> {
+    return this.api.localResource(MiyaloloApiService.LOCAL_MARRIAGE_IMAGES).then(data => {
+      return data;
+    })
+  }
+
 }

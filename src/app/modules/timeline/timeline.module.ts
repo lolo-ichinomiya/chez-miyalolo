@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from "@angular/router";
 import { SharedModule } from 'app/shared/shared.module';
 import { CarineComponent } from './carine/carine.component';
+import { MarriageComponent } from './marriage/marriage.component';
 
 const routes: Routes = [ ];
 
@@ -12,7 +13,7 @@ const routes: Routes = [ ];
     SharedModule,
     RouterModule.forRoot(routes, {useHash: true})
   ],
-  declarations: [CarineComponent],
+  declarations: [CarineComponent, MarriageComponent],
   exports: [ CarineComponent ]
 
 })
